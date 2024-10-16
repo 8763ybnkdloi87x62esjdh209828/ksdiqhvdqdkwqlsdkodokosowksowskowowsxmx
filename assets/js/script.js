@@ -74,3 +74,16 @@ updateText();
 // Initial setup to show the first phrase
 dynamicTextElement.textContent = phrases[currentIndex];
 dynamicTextElement.classList.add("visible");
+
+
+
+// Whatssap API
+
+function sendWhatsAppMessage() {
+  const phoneNumber = "+212781140993"; // Replace with the recipient's phone number (with country code, but no '+' or '-')
+  const message = "Hello, ITZONE !!"; // Replace with your desired message
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+  
+  // Open WhatsApp
+  window.open(whatsappUrl, '_blank');
+}
